@@ -135,9 +135,16 @@
 - **生态工具**：数据迁移、校验、回滚工具链是否完备（如 TDSQL 的 DTS-DBbridge、OceanBase 的 OMS）
 - **AI 原生**：向量检索、多模数据、库内 AI 推理能力
 
-## 学习路径
+## 实操验证建议
 
-1. 本地用 Docker 跑一个 OceanBase 社区版或 TiDB，体验多副本与分布式事务
-2. 读《OceanBase 系统架构》官方文档，对照 [VLDB 2022 论文](https://www.vldb.org/pvldb/vol15/p3385-xu.pdf)
-3. 关注各厂商认证课程（OceanBase 认证、TiDB PCTA/PCTP、GaussDB 认证）
-4. 进阶读 [papers.md](papers.md) 的 TDSQL / GaussDB PVLDB 2024 论文，对比不同国产库的系统设计
+选型不能只看材料，建议按以下步骤亲手验证：
+
+| 步骤 | 动作 | 验证什么 |
+|---|---|---|
+| **搭环境** | Docker 跑 OceanBase 社区版或 TiDB，配多副本 | 观察副本角色、故障切换时的主副本迁移 |
+| **压分片键** | 按目标业务的真实分片键建表并压测 | 携带/不携带分片键的 TPS 差异、跨分片事务占比——这是银行核心迁移的关键指标 |
+| **注入故障** | kill 主副本、断网，观察 RTO 与数据一致性 | 验证厂商宣称的 RPO=0 是否属实（方法见 [docs/migration.md](docs/migration.md)） |
+| **测兼容** | 用迁移工具扫描存量 Oracle/MySQL 的存储过程、触发器、语法差异 | 提前量化改造工作量，避免投产前突击 |
+| **查资质** | 核对候选库是否有同规模银行核心的长期稳定运行记录 | 「上线过」≠「跑稳过」，运行年限比单一上线案例更有说服力 |
+
+> 认证课程（OceanBase OBCA/OBCP、TiDB PCTA/PCTP、GaussDB HCIA/HCIP）适合系统性入门，但替代不了针对自身业务场景的压测与故障验证。
