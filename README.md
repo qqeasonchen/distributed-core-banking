@@ -14,6 +14,7 @@
 
 | 文件 | 内容 |
 |---|---|
+| [timeline.md](timeline.md) | **发展时间线（2014—2026）**：政策、产品、案例、国际脉络四条线 |
 | [docs/concepts.md](docs/concepts.md) | 核心概念：Core Banking、集中式 vs 分布式、信创 |
 | [docs/architecture.md](docs/architecture.md) | 架构方案：微服务、分布式数据库、事务一致性、异地多活 |
 | [docs/migration.md](docs/migration.md) | 迁移方法论：双轨并行、灰度切流、数据核对 |
@@ -24,6 +25,9 @@
 | [resources.md](resources.md) | 学习资源：课程、博客、开源项目、迁移工程方法 |
 
 ## 2026-11 更新摘要
+
+> 第二批补充：新增 [timeline.md](timeline.md)，把 2014—2026 的政策、数据库产品、银行案例、国际脉络按时间轴串起来，重点补齐 2014—2024 的历史空白（39 号文、去 IOE、GoldenDB 立项、中信信用卡/账务核心、OceanBase TPC-C、openGauss 开源、金融信创三期试点等）。
+
 
 本轮全网检索补充的主要内容（各文件内以 🔄 标记）：
 
