@@ -1,6 +1,8 @@
 # 学习资源
 
 > 🔄 **2026-11 更新**：新增开源项目 12 项、架构专题资料、迁移工程方法体系。
+>
+> 🔄 **2026-11 二轮更新**：新增金融开源项目的 **2014—2024 起源时间线**，帮助判断项目成熟度与活跃度。
 
 ## 开源项目
 
@@ -40,6 +42,26 @@
 | **Apache SkyWalking** | 国产 APM，微服务/云原生全栈可观测，原生接入 OTLP | [官网](https://skywalking.apache.org/) |
 | **OpenTelemetry / Prometheus** | 云原生遥测事实标准与时序监控标配 | [OTel](https://opentelemetry.io/) · [Prometheus](https://prometheus.io/) |
 | **AppActive**（阿里） | 多活容灾中间件，提供多活标准、实现与 Demo，覆盖单 AZ→多地域→多云；**核心代码停留在 2021—2022，低活跃维护** | [GitHub](https://github.com/alibaba/Appactive) · [文档](https://doc.appactive.io/) |
+
+### 金融开源项目起源时间线（新增，2014—2024）
+
+> 选型时「项目活了多久」和「还在不在活跃维护」同样重要。以下标注诞生/毕业时间，⚠️ 标注低活跃项目。
+
+| 时间 | 项目 | 起源/里程碑 |
+|---|---|---|
+| 2015-09 | **TiDB** | PingCAP 开源，一月 Star 超 2700；2018 TiKV 入 CNCF、2020 4.0 GA |
+| 2016 | **Apache EventMesh 前身** | 诞生于微众银行；2021 捐给 Apache，2023-05 毕业成为 ASF 顶级项目（TLP），**首个进入 ASF 的中国金融项目** |
+| 2017 | **Seata** | 阿里开源分布式事务框架（原 Fescar），2019 进入 Apache 孵化器 |
+| 2017-04 | **FISCO BCOS** | 微众银行等金链盟成员孵化的国产金融联盟链底层平台，2019 开源 |
+| 2018-08 | **TiKV / TiDB Operator** | 进入 CNCF Sandbox |
+| 2019-08 | **AskTUG** | TiDB 中文社区论坛上线 |
+| 2020-06-30 | **openGauss** | 华为开源关系型数据库 |
+| 2020-07 | **Chaos Mesh** | PingCAP 开源云原生混沌工程平台，进入 CNCF 沙箱 |
+| 2021-06-01 | **OceanBase 社区版** | 从 3.1.0 起开放源码 |
+| 2021 | **AppActive** | 阿里多活容灾中间件开源 ⚠️ 核心代码停留在 2021—2022，低活跃维护 |
+| 2023-05 | **Apache Fineract-CN** | 微服务版归档 ⚠️ 仅保留参考学习价值 |
+
+> **判断**：金融中间件开源有两条清晰脉络——**2015—2017 数据库/事务层**（TiDB、Seata、OceanBase），**2020 后云原生/可观测/混沌层**（Chaos Mesh、OpenTelemetry、EventMesh TLP）。老项目要核查维护活跃度，归档/低活跃项目（Fineract-CN、AppActive）只作架构学习，不进生产选型。
 
 ## 学习路径建议
 
