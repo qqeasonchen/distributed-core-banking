@@ -15,9 +15,12 @@
 | 文件 | 内容 |
 |---|---|
 | [timeline.md](timeline.md) | **发展时间线（2014—2026）**：政策、产品、案例、国际脉络四条线 |
-| [docs/concepts.md](docs/concepts.md) | 核心概念：Core Banking、集中式 vs 分布式、信创 |
-| [docs/architecture.md](docs/architecture.md) | 架构方案：微服务、分布式数据库、事务一致性、异地多活 |
-| [docs/migration.md](docs/migration.md) | 迁移方法论：双轨并行、灰度切流、数据核对 |
+| [docs/concepts.md](docs/concepts.md) | **原理层**：复式记账、CAP/PACELC、一致性谱系、隔离异常、共识与时钟 |
+| [docs/architecture.md](docs/architecture.md) | **设计层**：DDD 限界上下文、分片策略、共识算法、事务模式、容灾指标 |
+| [docs/migration.md](docs/migration.md) | **工程层**：绞杀者模式、CDC、一致性校验、Jepsen、灰度切换 |
+
+> `docs/` 三份文档定位为**知识层**（是什么/为什么/怎么设计/怎么实现），以教科书、论文、官方文档为来源；
+> 根目录文档为**资料层**（具体案例、产品、时间线、政策）。两层互不复述、交叉索引。
 | [databases.md](databases.md) | 分布式数据库：OceanBase、TDSQL、GaussDB、GoldenDB 等 |
 | [vendors.md](vendors.md) | 厂商与产品：国际（Temenos、Fiserv）与国内（长亮、宇信等） |
 | [cases.md](cases.md) | 银行实践案例：大行去主机收官、省级农信、国际案例 |
@@ -28,7 +31,9 @@
 
 > 第二批补充：新增 [timeline.md](timeline.md)，把 2014—2026 的政策、数据库产品、银行案例、国际脉络按时间轴串起来，重点补齐 2014—2024 的历史空白（39 号文、去 IOE、GoldenDB 立项、中信信用卡/账务核心、OceanBase TPC-C、openGauss 开源、金融信创三期试点等）。
 >
-> 第三批补充（本轮）：把历史资料**真正写进各分类文档**，不再只是时间线骨架——`cases.md` 补 2014—2018 股份行/城商行早期改造与邮储六年时间线，`papers.md` 补 2014—2024 政策原文（含文号），`databases.md` 补四大产品的逐版本演进，`vendors.md` / `resources.md` 补厂商沿革与开源项目起源。
+> 第三批补充：把历史资料**真正写进各分类文档**，不再只是时间线骨架——`cases.md` 补 2014—2018 股份行/城商行早期改造与邮储六年时间线，`papers.md` 补 2014—2024 政策原文（含文号），`databases.md` 补四大产品的逐版本演进，`vendors.md` / `resources.md` 补厂商沿革与开源项目起源。
+>
+> 第四批（本轮）：重构 `docs/` 三份文档，**消除与根目录文档的内容重复**——移除其中复述的银行案例、产品版本与政策文号，改为原理/设计/工程知识层，全网补充复式记账、CAP/PACELC、一致性模型、隔离异常、时钟、DDD、一致性哈希、共识算法、绞杀者模式、CDC、Jepsen 等理论出处（35 个新增一手来源链接）。
 
 本轮全网检索补充的主要内容（各文件内以 🔄 标记）：
 
