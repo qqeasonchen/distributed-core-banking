@@ -1,12 +1,8 @@
 # 学习资源
 
-> 🔄 **2026-11 更新**：新增开源项目 12 项、架构专题资料、迁移工程方法体系。
->
-> 🔄 **2026-11 二轮更新**：新增金融开源项目的 **2014—2024 起源时间线**，帮助判断项目成熟度与活跃度。
-
 ## 开源项目
 
-### 已有项目
+### 基础项目
 
 | 项目 | 说明 | 链接 |
 |---|---|---|
@@ -19,7 +15,7 @@
 | ShardingSphere | 分布式数据库中间件生态（JDBC / Proxy / Sidecar 三种形态） | [GitHub](https://github.com/apache/shardingsphere) |
 | CockroachDB / YugabyteDB | 国际分布式 SQL 参考 | [crdb](https://github.com/cockroachdb/cockroach) · [yugabyte](https://github.com/yugabyte/yugabyte-db) |
 
-### 新增：金融核心中间件
+### 金融核心中间件
 
 | 项目 | 说明 | 链接 |
 |---|---|---|
@@ -32,7 +28,7 @@
 | **Apache Flink** | 流批统一引擎；AWS × Zeta 案例用 Flink+Kafka 实现 **2.08 亿信用账户 40 分钟完成 EOD** | [官网](https://flink.apache.org/) · [AWS 案例](https://aws.amazon.com/solutions/case-studies/zeta-amazon-eks/) |
 | **Canal** | MySQL binlog 订阅/CDC，数据迁移与准实时对账的关键组件 | [GitHub](https://github.com/alibaba/canal) |
 
-### 新增：银行核心开源实现与可观测性
+### 银行核心开源实现与可观测性
 
 | 项目 | 说明 | 链接 |
 |---|---|---|
@@ -43,7 +39,7 @@
 | **OpenTelemetry / Prometheus** | 云原生遥测事实标准与时序监控标配 | [OTel](https://opentelemetry.io/) · [Prometheus](https://prometheus.io/) |
 | **AppActive**（阿里） | 多活容灾中间件，提供多活标准、实现与 Demo，覆盖单 AZ→多地域→多云；**核心代码停留在 2021—2022，低活跃维护** | [GitHub](https://github.com/alibaba/Appactive) · [文档](https://doc.appactive.io/) |
 
-### 金融开源项目起源时间线（新增，2014—2024）
+### 金融开源项目起源时间线（2014—2024）
 
 > 选型时「项目活了多久」和「还在不在活跃维护」同样重要。以下标注诞生/毕业时间，⚠️ 标注低活跃项目。
 
@@ -96,7 +92,7 @@
 - 《分布式数据库系统原理》（各数据库官方文档是最好的教材）
 - OceanBase / TiDB 官方博客的架构系列文章
 
-## 架构专题资料（新增）
+## 架构专题资料
 
 | 主题 | 资料 | 说明 |
 |---|---|---|
@@ -106,7 +102,7 @@
 | 核心系统上云 | [腾讯云《商业银行核心系统分布式转型白皮书》（2025-07）](https://www.cet.com.cn/wzsy/kjzx/10234306.shtml) · [华为分布式新核心解决方案 5.5](https://support.huawei.cn/cn/blogs/2025/industries/finance/finance-core) | 多地多活 + 单元化；某股份制银行 RPO=0、RTO<60 秒 |
 | HTAP / Serverless | [TiDB Serverless 与 TiFlash](https://cloud.baidu.com/article/5039420) · 金仓 Serverless+HTAP | 实时风控场景下 OLTP/OLAP 互不干扰 |
 
-## 迁移工程方法体系（新增）
+## 迁移工程方法体系
 
 | 环节 | 资料 | 要点 |
 |---|---|---|

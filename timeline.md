@@ -1,6 +1,6 @@
 # 分布式核心银行发展时间线（2014—2026）
 
-> 把散落在 [cases.md](cases.md)、[databases.md](databases.md)、[papers.md](papers.md)、[vendors.md](vendors.md) 的事件按时间轴重新组织，补齐 2014—2024 的历史脉络。
+> 按时间轴组织 [cases.md](cases.md)、[databases.md](databases.md)、[papers.md](papers.md)、[vendors.md](vendors.md) 中的事件，覆盖 2014—2024 年的历史脉络。
 >
 > **来源标注**：`一手` = 官方/厂商官网/官方署名；`权威二手` = 权威媒体/研究报告；`待核实` = 仅搜索摘要命中。年份以公开披露为准，不同来源对「立项/投产/全面投产」口径可能不同。
 

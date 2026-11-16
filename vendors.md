@@ -1,8 +1,6 @@
 # 厂商与产品
 
-> 🔄 **2026-11 更新**：新增国际厂商 8 家、国内厂商 8 家、市场格局一章。厂商财务数据来自上市公司年报/媒体转述，市场排名多为二手转述 IDC 报告，引用前建议核对原报告。
->
-> 🔄 **2026-11 二轮更新**：补齐厂商 **2014—2024 历史沿革**（Thought Machine 等），见下方专章。
+> 厂商财务数据来自上市公司年报或媒体转述，市场排名多为二手转述 IDC 报告，引用前建议核对原报告。
 
 ## 国际厂商
 
@@ -14,19 +12,19 @@
 | Infosys Finacle | Finacle | 印度系，新兴市场占有率高；2026-07 Bank of Sydney、National Bank of Greece 案例 | [infosys.com/finacle](https://www.infosys.com/industries/financial-services/offerings/finacle.html) |
 | SAP | S/4HANA Banking | ERP 厂商的银行核心方案 | [sap.com](https://www.sap.com) |
 | Thought Machine | Vault Core | 云原生核心新锐（英国），Lloyds、JPMorgan、Standard Chartered、Deutsche Bank 等采用；2025 财年营收破 1 亿美元（+57%） | [thoughtmachine.net](https://www.thoughtmachine.net) |
-| **Oracle Banking**（新增） | FLEXCUBE / Banking Cloud Services | 2026-02 发布「AI 优先智慧银行」蓝图与 agentic 平台；2025-05 新增 Retail Lending Servicing 与 Collections 云服务 | [oracle.com/banking](https://www.oracle.com/banking) |
-| **Finastra**（新增） | Universal Banking / Essence | Vista 系统性分拆：2025-05 Treasury & Capital Markets 售 Apax 关联方；2026-06 美国中端业务售 CORA，旗舰核心 Universal Banking 售 Pollen Street Capital | [finastra.com](https://www.finastra.com) |
-| **TCS BaNCS**（新增） | BaNCS / BaNCS AI Compass | 2025-12 发布 AI Compass（ML/DL + 生成式 AI + 预置 Agent，覆盖开户、信贷审批、证券服务） | [tcs.com](https://www.tcs.com/) |
-| **Murex**（新增） | MX.3 | 资本市场交易/清算核心；2026-03 与 Quant Network 合作嵌入代币化存款/数字债券结算；连续第八年 IBSi Sales League Table 第一 | [murex.com](https://www.murex.com) |
-| **Avaloq**（新增，NEC 子公司） | Avaloq / Avaloq Mosaic | 财富管理与私行核心，服务 170+ 金融机构；2025-11 推 Mosaic（不替换现有核心的增量现代化） | [avaloq.com](https://www.avaloq.com) |
-| **Backbase**（新增） | Banking OS | 2026-06 收购 Kasisto（银行级 agentic AI，客户含摩根大通、TD Bank、Westpac），并入 AI-native Banking OS；120+ 家银行在用 | [backbase.com](https://www.backbase.com) |
-| **Mambu**（新增） | SaaS 云核心 | 2025 支付处理量同比 +7 倍；2026-02 Payments hub 扩展至 EMEA/LATAM/APAC | [mambu.com](https://www.mambu.com) |
-| **10x Banking**（新增） | SuperCore | 2026-08 获 £40M 融资；2025 Q4 起 EBITDA 转正；生产账户超 1000 万，设计目标 >10 万 TPS/行 | [10xbanking.com](https://www.10xbanking.com) |
-| **Codix**（新增） | iMX | 专注贸易/供应链融资，覆盖 50+ 国家；2026-06 与 LoanWatch 合作切入美国 ABL 市场 | [codix.eu](https://www.codix.eu) |
+| **Oracle Banking** | FLEXCUBE / Banking Cloud Services | 2026-02 发布「AI 优先智慧银行」蓝图与 agentic 平台；2025-05 新增 Retail Lending Servicing 与 Collections 云服务 | [oracle.com/banking](https://www.oracle.com/banking) |
+| **Finastra** | Universal Banking / Essence | Vista 系统性分拆：2025-05 Treasury & Capital Markets 售 Apax 关联方；2026-06 美国中端业务售 CORA，旗舰核心 Universal Banking 售 Pollen Street Capital | [finastra.com](https://www.finastra.com) |
+| **TCS BaNCS** | BaNCS / BaNCS AI Compass | 2025-12 发布 AI Compass（ML/DL + 生成式 AI + 预置 Agent，覆盖开户、信贷审批、证券服务） | [tcs.com](https://www.tcs.com/) |
+| **Murex** | MX.3 | 资本市场交易/清算核心；2026-03 与 Quant Network 合作嵌入代币化存款/数字债券结算；连续第八年 IBSi Sales League Table 第一 | [murex.com](https://www.murex.com) |
+| **Avaloq**（NEC 子公司） | Avaloq / Avaloq Mosaic | 财富管理与私行核心，服务 170+ 金融机构；2025-11 推 Mosaic（不替换现有核心的增量现代化） | [avaloq.com](https://www.avaloq.com) |
+| **Backbase** | Banking OS | 2026-06 收购 Kasisto（银行级 agentic AI，客户含摩根大通、TD Bank、Westpac），并入 AI-native Banking OS；120+ 家银行在用 | [backbase.com](https://www.backbase.com) |
+| **Mambu** | SaaS 云核心 | 2025 支付处理量同比 +7 倍；2026-02 Payments hub 扩展至 EMEA/LATAM/APAC | [mambu.com](https://www.mambu.com) |
+| **10x Banking** | SuperCore | 2026-08 获 £40M 融资；2025 Q4 起 EBITDA 转正；生产账户超 1000 万，设计目标 >10 万 TPS/行 | [10xbanking.com](https://www.10xbanking.com) |
+| **Codix** | iMX | 专注贸易/供应链融资，覆盖 50+ 国家；2026-06 与 LoanWatch 合作切入美国 ABL 市场 | [codix.eu](https://www.codix.eu) |
 
 > **趋势**：国际厂商 2025—2026 双主线——① **AI Agent 化**（Oracle agentic platform、TCS BaNCS AI Compass、Backbase 收购 Kasisto）；② **资本重组**（Finastra 被 Vista 拆分，核心系统作为高粘性经常性收入资产被 PE 单独定价）。云原生/SaaS 化核心（Temenos SaaS、Thought Machine Vault）与国内「分布式 + 信创」路径殊途同归。
 
-### 开放银行 / API 基础设施层（新增线索）
+### 开放银行 / API 基础设施层
 
 - **TrueLayer**：英国上线 Bank on File（基于 UKPI 的商业 VRP 框架），把开放银行从「账户信息聚合」推进到可持续支付（cVRP）
 - **Nordigen**：2022 年被 GoCardless 收购，2025 年停止新用户接入；「免费银行数据 API」时代结束
@@ -46,13 +44,13 @@
 | 天阳科技 / 安硕信息 | 信贷系统 | 核心外围信贷领域 | — |
 | 蚂蚁数科 | OceanBase + 核心云 | 数据库 + 核心云整体方案 | [antgroup.com](https://www.antgroup.com) |
 | 华为 | GaussDB + 金融云 | 数据库 + 基础设施；分布式新核心解决方案 5.5（多地多活 + 单元化） | [huaweicloud.com](https://www.huaweicloud.com/product/gaussdb.html) |
-| **科蓝软件**（新增） | 金融分布式新核心 5.5 / SUNDB | 与华为联合发布；GaussDB 基础上「云原生三层池」性能 +1.2 倍；2025 营收 5.91 亿元（-29.88%）、亏损 3.95 亿元 | [csii.com.cn](http://www.csii.com.cn) |
-| **南天信息**（新增） | 银行核心 / 渠道平台 | 2025 营收 100.04 亿元、归母净利 3661.89 万元（-68.33%） | [nantian.com.cn](https://www.nantian.com.cn) |
-| **高伟达**（新增） | 银行客户管理/信贷/数据类 | 2025 营收 10.3 亿元（-12.36%），营收连续 4 年下滑 | [git.com.cn](https://www.git.com.cn) |
-| **润和软件**（新增） | 新一代分布式核心 / 金融测试 | 连续 5 年 IDC 全球金融科技百强；2025 营收 39.82 亿元（+17.15%），金融科技 19.52 亿元 | [rjsoft.com.cn](https://www.rjsoft.com.cn) |
-| **京北方**（新增） | 核心系统重构 / 盘庚测试云 | 参与存款/信贷/支付核心重构、数据迁移、国产化适配；21 项信创适配认证；2025 营收 48.39 亿元（+4.38%） | [northking.com.cn](https://www.northking.com.cn) |
-| **软通动力**（新增） | ASDM AI 原生研发平台 | 连续两年中国银行业 IT 解决方案市占率 TOP5；TDSQL 认证伙伴；2025 营收 350.90 亿元（+12.05%），AI 相关业务占比 52.6% | [isoftstone.com](https://www.isoftstone.com) |
-| **太极股份 / 电科金仓**（新增） | KingbaseES | 控股电科金仓（原人大金仓）；2025 营收 77.89 亿元，电科金仓净利 9577.72 万元 | [taiji.com.cn](https://www.taiji.com.cn) |
+| **科蓝软件** | 金融分布式新核心 5.5 / SUNDB | 与华为联合发布；GaussDB 基础上「云原生三层池」性能 +1.2 倍；2025 营收 5.91 亿元（-29.88%）、亏损 3.95 亿元 | [csii.com.cn](http://www.csii.com.cn) |
+| **南天信息** | 银行核心 / 渠道平台 | 2025 营收 100.04 亿元、归母净利 3661.89 万元（-68.33%） | [nantian.com.cn](https://www.nantian.com.cn) |
+| **高伟达** | 银行客户管理/信贷/数据类 | 2025 营收 10.3 亿元（-12.36%），营收连续 4 年下滑 | [git.com.cn](https://www.git.com.cn) |
+| **润和软件** | 新一代分布式核心 / 金融测试 | 连续 5 年 IDC 全球金融科技百强；2025 营收 39.82 亿元（+17.15%），金融科技 19.52 亿元 | [rjsoft.com.cn](https://www.rjsoft.com.cn) |
+| **京北方** | 核心系统重构 / 盘庚测试云 | 参与存款/信贷/支付核心重构、数据迁移、国产化适配；21 项信创适配认证；2025 营收 48.39 亿元（+4.38%） | [northking.com.cn](https://www.northking.com.cn) |
+| **软通动力** | ASDM AI 原生研发平台 | 连续两年中国银行业 IT 解决方案市占率 TOP5；TDSQL 认证伙伴；2025 营收 350.90 亿元（+12.05%），AI 相关业务占比 52.6% | [isoftstone.com](https://www.isoftstone.com) |
+| **太极股份 / 电科金仓** | KingbaseES | 控股电科金仓（原人大金仓）；2025 营收 77.89 亿元，电科金仓净利 9577.72 万元 | [taiji.com.cn](https://www.taiji.com.cn) |
 
 ## 银行自研 / 科技子公司
 
@@ -63,7 +61,7 @@
 | 阿里 | AppActive 多活容灾（AHAS-MSHA 开源版） | [AppActive](https://github.com/alibaba/Appactive)（**核心代码停留在 2021—2022，文档 2025 仍更新，低活跃维护**） |
 | 建信金科 / 农银金科 / 工银科技 | 大行科技子公司 | 承接母行技术输出；工行累计 700+ 发明专利、10+ 行业标准提案 |
 
-## 市场格局（新增，2025—2026）
+## 市场格局（2025—2026）
 
 | 指标 | 数据 | 来源 |
 |---|---|---|
@@ -75,7 +73,7 @@
 
 > **判断**：不要把「市场份额头部」等同于「经营质量健康」；市场份额排名与财务健康度应分开记录。
 
-## 厂商历史沿革（2014—2024，新增）
+## 厂商历史沿革（2014—2024）
 
 > 理解当前格局需要看历史路径：国际厂商走「核心套件 → SaaS/云原生 → AI Agent」三段式，国内厂商走「外围项目 → 分布式核心 → 信创整机一体方案」三段式。
 
@@ -91,7 +89,7 @@
 | 2025 | 入选 Gartner 零售核心银行魔力象限 Leader，执行力维度最高 |
 | 2026 | 年营收突破 **1 亿**（官网 www 版写 $100m、另一版写 £100m，**币种以官网最新口径为准**）、ARR +59%，新增里斯本工程中心 |
 
-- 来源：[Thought Machine 官网 Our Journey](https://www.thoughtmachine.net/about-us)（**一手**，本轮逐项核对；官网不同版本对营收币种表述不一，已如实标注）
+- 来源：[Thought Machine 官网 Our Journey](https://www.thoughtmachine.net/about-us)（**一手**，各项时间节点已逐项核对；官网不同版本对营收币种表述不一，已如实标注）
 
 ### 国内核心厂商的早期出海与技术积累
 
