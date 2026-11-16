@@ -48,7 +48,9 @@ Joel Spolsky 在《Things You Should Never Do》(2000) 中称抛弃可运行代�
 
 典型稳妥顺序：只读查询 → 边缘功能 → 复杂核心。数据唯一所有者（one writer per table）是关键纪律——新旧双方同时写同一批记录必然产生分歧。
 
-来源：[Martin Fowler — StranglerFigApplication](https://martinfowler.com/bliki/StranglerFigApplication.html)、[microservices.io — Strangler Fig 模式](https://microservices.io/post/refactoring/2023/06/21/strangler-fig-application-pattern-incremental-modernization-to-services.md.html)、[Azure Architecture Center 模式说明（转述）](https://computese.com/strangler-fig-pattern)。
+**来自实践的切片序列**：中信银行的迁移按风险递增逐步推进——冠字号系统 → 门户 → 同业 → 积分 → 信用卡核心 → 账务核心，从边缘到中枢，前后历时约六年（案例详情见 [cases.md](../cases.md)）。这印证了绞杀者模式在金融核心的判断：**切片顺序由风险而非代码便利度决定，越靠近账务的越后置**。
+
+来源：[Martin Fowler — StranglerFigApplication](https://martinfowler.com/bliki/StranglerFigApplication.html)、[microservices.io — Strangler Fig 模式](https://microservices.io/post/refactoring/2023/06/21/strangler-fig-application-pattern-incremental-modernization-to-services.md.html)、中信凌云工程公开资料（见 cases.md）。
 
 ## 数据迁移：从双写到 CDC
 
@@ -102,6 +104,8 @@ cache.invalidate()    // ③ 失败 → 脏读
 - **网络流量录制 + 旁路镜像**（TAP）：不侵入应用捕获真实交易
 - **两层级比对**：交易级（业务结果）+ 数据库级（落库状态）都要比，只比对前者会漏掉"结果对但账错"
 
+**来自实践的验证工艺**：工行在核心下移中把生产流量注入仿真环境，对关键场景做 100% 仿真核对；中信用代码翻译与仿真比对工具让新老系统长时间同步运行、逐笔对账。这些实践提炼出的共性是——**比对必须双层、必须规模化、必须在新老系统并行期持续进行**，而不是上线前做一轮功能测试。
+
 ### 数据一致性校验算法
 
 | 方法 | 原理 | 适用 |
@@ -112,20 +116,15 @@ cache.invalidate()    // ③ 失败 → 脏读
 | **恒等式校验** | 利用借贷平衡、总分相等的数学不变量（见 concepts.md） | 账务系统的整体正确性 |
 | **流式差异检测** | 用流处理引擎按窗口聚合比对，分钟级发现差异 | 双轨期间的持续核对 |
 
-### 正确性验证的" adversarial 方法"：Jepsen
+### 对抗性验证：用故障注入实测正确性
 
-传统单元/集成测试**无法发现**分布式系统的脑裂、静默数据丢失——因为这些 bug 只在特定并发与故障交错下出现。Jepsen（Kyle Kingsbury 2013 年创建）是事实上的分布式系统正确性审计标准。
+传统单元/集成测试**无法发现**分布式系统的脑裂、静默数据丢失——因为这些 bug 只在特定并发与故障交错下出现。核心迁移必须补上这一类对抗性验证。
 
-**方法四要素**：
-
-1. **生成器 Generator**：产生并发工作负载（寄存器读写、账户转账、集合追加等）
-2. **客户端 Client**：对被测系统发操作，并记录每个操作的历史（invoke / ok / fail / info + 时间戳）
-3. **对手 Nemesis**：注入故障——网络分区、进程 kill/SIGSTOP、时钟偏移（libfaketime）、包延迟
-4. **检查器 Checker**：把操作历史喂给一致性模型验证器（Knossos / Elle），检验是否存在一个合法的顺序执行能解释观测结果；若不存在，输出**最短的违规证据片段**
-
-它检验的标准通常是**线性一致性**（Herlihy & Wing 1990）——一个不读宣传材料、只读历史记录的"法官"。同类工具分工不同：Chaos Mesh 只注入故障不验正确性；TLA+ 验证规格而非运行中的软件；Jepsen 验证**实际运行的系统**。
+**做法**：让一个测试框架持续对被测系统发并发操作并记录每个操作的结果，同时注入故障（网络分区、进程 kill、时钟偏移、包延迟），最后用检查器分析操作历史，判断是否存在一个合法执行能解释所有观测结果；若不存在，就输出**最短的违规证据**。这比读厂商的合规声明可靠得多。
 
 > **对金融核心的启示**：厂商宣称的"ACID 合规"必须用故障注入实测。弱默认写关注（如 `w=1`）在主备切换时可能丢失全部未确认写入——这类问题只有对抗性测试能暴露。
+
+工具分工：Jepsen 类框架验证**运行中系统的正确性**（istory + 一致性检查）；混沌工程工具（如 Chaos Mesh）侧重**注入故障验证可用性**；形式化工具（如 TLA+）验证**设计规格**而非运行中的软件。三者互补，核心系统的验证应各有覆盖。
 
 来源：[Jepsen 官网与分析报告](https://jepsen.io/analyses)、[jepsen-io/jepsen 框架](https://github.com/jepsen-io/jepsen)、[Jepsen 方法论综述](https://www.scixa.com/article?lang=en&slug=jepsen-linearizability-testing)、[CockroachDB Jepsen 测试用例（bank/sets/register）](https://github.com/jepsen-io/cockroachdb)。
 
@@ -159,12 +158,12 @@ cache.invalidate()    // ③ 失败 → 脏读
 | 全量业务覆盖 | 尤其低频长尾业务（销户 / 挂失 / 司法冻结）易在切流后暴露 |
 | 故障演练充分 | 切换与回切路径都经过对抗性验证 |
 | 回退有效 | 分级回退开关可用，故障分钟级恢复 |
-| 老系统真正下线 | **单轨运行**才是终点；长期双轨不是成功而是新债务 |
+| 老系统真正下线 | **单轨运行**才是终点；长期双轨不是成功而是新债务——工行、四川农商联合银行都以大机正式下电作为改造收官的标志性动作 |
 
-## 方法论索引（理论出处）
+## 方法与工程来源
 
-- **绞杀者模式**：Martin Fowler, *Strangler Fig Application* (2004/2019)；Sam Newman, *Monolith to Microservices* (2019)
-- **CDC / Outbox**：Debezium 文档；LinkedIn Databus (2012) 是变更捕获的早期工业实践
-- **Jepsen / 线性一致性**：Kingsbury, *Jepsen* 系列 (2013–2020)；Herlihy & Wing, *Linearizability* (1990)
-- **事务隔离与异常**：见 [concepts.md](concepts.md) 隔离级别一节
-- **一致性哈希与分片**：见 [architecture.md](architecture.md) 数据分片一节
+- **绞杀者模式**：[Martin Fowler — Strangler Fig Application](https://martinfowler.com/bliki/StranglerFigApplication.html)；Sam Newman, *Monolith to Microservices* (2019)
+- **CDC / Outbox**：[Debezium 官方文档](https://www.debezium.io/documentation/reference/stable/index.html)；LinkedIn Databus (2012) 是变更捕获的早期工业实践
+- **对抗性验证框架**：[Jepsen 官网与分析报告](https://jepsen.io/analyses)、[jepsen-io/jepsen](https://github.com/jepsen-io/jepsen)
+- **事务隔离与一致性判断**：见 [concepts.md](concepts.md)
+- **单元化切换与容灾演练**：见 [architecture.md](architecture.md) 多活与容灾一节
