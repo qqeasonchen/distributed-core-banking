@@ -3,7 +3,7 @@
 > **本文定位**：讲清"是什么"——核心银行系统的领域本质、分布式核心"分布在哪"，以及贯穿设计与改造的基本判断。
 > 具体**银行案例**见 [cases.md](cases.md)，**数据库产品**见 [databases.md](databases.md)，
 > **厂商**见 [vendors.md](vendors.md)，**政策文号与时间线**见 [papers.md](papers.md) / [timeline.md](timeline.md)。
-> 本文讲领域概念与工程判断，关键判断处以业界真实实践佐证（案例档案见 [cases.md](cases.md)），不展开分布式算法的理论推导——**从案例提炼的架构方案**见 [architecture.md](architecture.md)，工程实现方法见 [migration.md](migration.md)。
+> 本文讲领域概念与工程判断，关键判断处以业界真实实践佐证（案例档案见 [cases.md](cases.md)），不展开分布式算法的理论推导——**从案例提炼的分布式架构方案**见 [architecture.md](architecture.md)、**账务模块应用架构方案**见 [application.md](application.md)，工程实现方法见 [migration.md](migration.md)。
 
 ## Core Banking（核心银行系统）
 
@@ -25,7 +25,7 @@
 | **参数与运营** | 利率/费率/汇率配置、参数中心 | 参数散落、变更风险高 |
 | **批量与日切** | 日终批处理、结息、跑批、日切 | 批处理窗口长、联机与批量互斥（落地实证：[微众银行 TiDB 贷款核心批量实践](databases.md)） |
 
-> **共性判断**：这些痛点高度同源——**耦合**。交易与核算耦合、账户与产品耦合、业务与技术耦合。新一代核心的设计主线就是逐层解耦，再叠加分布式与信创。各模块的痛点与业界解法见 [architecture.md](architecture.md)。
+> **共性判断**：这些痛点高度同源——**耦合**。交易与核算耦合、账户与产品耦合、业务与技术耦合。新一代核心的设计主线就是逐层解耦，再叠加分布式与信创。各模块的痛点与业界解法见 [application.md](application.md)。
 
 ### 关键特征
 
