@@ -1,6 +1,6 @@
 # Distributed Core Banking / 金融分布式核心银行系统资料集
 
-收集整理分布式核心银行系统（Distributed Core Banking System）的相关资料：概念、架构、迁移工程、分布式数据库、中间件、大数据平台、基础设施与运维应急、银行实践案例、厂商方案、标准论文、学习资源，以及「小代嘚吧嘚」银行业务技术系列专题教程。目录按"整体到局部"组织，详见下方。
+收集整理分布式核心银行系统（Distributed Core Banking System）的相关资料：概念、架构、迁移工程、分布式数据库、中间件、大数据平台、基础设施与运维应急、银行实践案例、厂商方案、标准论文、学习资源，以及代堂鸣银行业务技术系列专题教程。目录按"整体到局部"组织，详见下方。
 
 > 中文语境下"分布式核心"指将传统集中式（大型机 + 集中式数据库）的核心银行系统改造为微服务 + 分布式数据库架构的新一代核心系统，兼有国产化替代（信创）的时代背景。
 
@@ -20,7 +20,7 @@
 | 文件 | 内容 |
 |---|---|
 | [architecture.md](architecture.md) | **分布式架构**（案例在前、方案在后）：蚂蚁 LDC 单元化、RZone/GZone/CZone、分片键与单元数量判据、流量路由与封闭、多活三形态、两地三中心 vs 异地多活、切换演练工艺、微众两地七中心 |
-| [application.md](application.md) | **应用架构·账务模块方案**：热点账户、业会分离、双余额与毫秒级日切、产品工厂与参数化、数据标准与全链路追溯，附痛点—方案速查表 |
+| [application.md](application.md) | **应用架构·账务模块方案**：热点账户、业会分离、双余额与毫秒级日切、产品工厂与参数化、数据标准与全链路追溯、分布式与微服务的应用边界、应用集成与松耦合，附痛点—方案速查表 |
 | [migration.md](migration.md) | **迁移工程**：不停机换引擎——渐进式替换与切片顺序、双写陷阱到 CDC、交易回放与一致性校验、故障注入对抗性验证、分布式事务按场景选型、灰度切换控制爆炸半径、迁移完成判据 |
 
 ### 三、技术组件
@@ -46,7 +46,7 @@
 | [vendors.md](vendors.md) | **厂商与产品**：国际厂商与开放银行 API 层、国内厂商与银行科技子公司、2025—2026 市场格局、厂商沿革（Thought Machine 时间线等） |
 | [papers.md](papers.md) | **论文·白皮书·标准**：分布式数据库与共识事务论文、2024—2026 前沿、行业标准与监管文件（JR/T 0203/0204/0205、39 号文、PSD2/ISO 20022）、按用途查阅指引 |
 | [resources.md](resources.md) | **学习资源**：开源项目（基础/金融中间件/核心实现与可观测性）及起源时间线、按角色查阅、社区、认证课程、书单、架构专题与迁移工程方法体系 |
-| [core-banking/](core-banking/) | **专题教程**（「小代嘚吧嘚」代堂鸣一手，88 篇全文要点，按四个业务专题拆分）：[核心系统](core-banking/核心系统.md)（40 篇：架构技术 / 7×24 与批量 / 账户产品 / 专项业务 / 工程实践）、[账务处理](core-banking/账务处理.md)（10 篇：分录 / 内部户 / 清算 / 错账）、[存款](core-banking/存款.md)（7 篇）、[贷款](core-banking/贷款.md)（8 篇）。「整体认知」23 篇已按主题融入 [concepts.md](concepts.md) / [application.md](application.md) / [migration.md](migration.md) / [vendors.md](vendors.md) |
+| [core-banking/](core-banking/) | **专题教程**（代堂鸣一手，公众号专辑全量覆盖，文件名用英文）：[core-system.md](core-banking/core-system.md)（架构技术 / 7×24 与批量 / 账户产品 / 专项业务 / 工程实践）、[accounting.md](core-banking/accounting.md)（分录 / 内部户 / 清算 / 错账）、[deposits.md](core-banking/deposits.md)、[loans.md](core-banking/loans.md)。**篇数核对**：「银行核心系统」**51 篇**——37 篇按主题拆在本目录四篇，13 篇（同属「整体认知」）按主题融入 [concepts.md](concepts.md) / [application.md](application.md) / [migration.md](migration.md) / [vendors.md](vendors.md)，1 篇中英双版在 vendors.md 一并收录；「整体认知」**23 篇**全部融入上述四文档；「账务处理」10 篇、「存款业务」7 篇、「贷款业务」8 篇独立成篇。跨专辑去重后共 88 篇 |
 
 从内容性质看，文档分为两层：`concepts.md` / `architecture.md` / `application.md` / `migration.md` 四份为**知识层**（对应上方第一、二组），从业界主流真实实践提炼可复用的方案、判据与踩坑经验；其余为**资料层**。两层互不复述、交叉索引——案例档案在资料层，方法与知识点在概念/分布式架构/应用架构/工程四份文档。
 
