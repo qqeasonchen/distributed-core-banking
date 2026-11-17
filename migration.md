@@ -1,8 +1,8 @@
 # 迁移工程方法论
 
 > **本文定位**：讲清"怎么迁移"——系统替换与数据迁移的通用工程模式、原理与验证方法。
-> **具体银行如何迁移**（时间线、切换轮次、演练次数）见 [cases.md](../cases.md)；
-> **数据库产品特性**见 [databases.md](../databases.md)；**测试工具资源**见 [resources.md](../resources.md)。
+> **具体银行如何迁移**（时间线、切换轮次、演练次数）见 [cases.md](cases.md)；
+> **数据库产品特性**见 [databases.md](databases.md)；**测试工具资源**见 [resources.md](resources.md)。
 > 本文只讲可复用的工程模式，不复述案例、产品版本与具体数字。
 
 ## 核心难题：不停机换引擎
@@ -48,7 +48,7 @@ Joel Spolsky 在《Things You Should Never Do》(2000) 中称抛弃可运行代�
 
 典型稳妥顺序：只读查询 → 边缘功能 → 复杂核心。数据唯一所有者（one writer per table）是关键纪律——新旧双方同时写同一批记录必然产生分歧。
 
-**来自实践的切片序列**：中信银行的迁移按风险递增逐步推进——冠字号系统 → 门户 → 同业 → 积分 → 信用卡核心 → 账务核心，从边缘到中枢，前后历时约六年（案例详情见 [cases.md](../cases.md)）。这印证了渐进式替换在金融核心的判断：**切片顺序由风险而非代码便利度决定，越靠近账务的越后置**。
+**来自实践的切片序列**：中信银行的迁移按风险递增逐步推进——冠字号系统 → 门户 → 同业 → 积分 → 信用卡核心 → 账务核心，从边缘到中枢，前后历时约六年（案例详情见 [cases.md](cases.md)）。这印证了渐进式替换在金融核心的判断：**切片顺序由风险而非代码便利度决定，越靠近账务的越后置**。
 
 来源：[Martin Fowler — StranglerFigApplication](https://martinfowler.com/bliki/StranglerFigApplication.html)、[microservices.io — Strangler Fig 模式](https://microservices.io/post/refactoring/2023/06/21/strangler-fig-application-pattern-incremental-modernization-to-services.md.html)、中信凌云工程公开资料（见 cases.md）。
 

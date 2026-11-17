@@ -1,8 +1,8 @@
 # 架构设计方法论：从业界实践提炼方案
 
 > **本文定位**：以业界主流的真实工程实践为论据，提炼分布式核心可复用的架构方案与判据——**案例在前，方案在后**。
-> 案例在此作为方法的证据，不做档案式罗列；**哪家银行何时投产、规模数字、完整时间线**见 [cases.md](../cases.md)。
-> **数据库产品能力**见 [databases.md](../databases.md)，**厂商**见 [vendors.md](../vendors.md)，**政策文号**见 [papers.md](../papers.md)。
+> 案例在此作为方法的证据，不做档案式罗列；**哪家银行何时投产、规模数字、完整时间线**见 [cases.md](cases.md)。
+> **数据库产品能力**见 [databases.md](databases.md)，**厂商**见 [vendors.md](vendors.md)，**政策文号**见 [papers.md](papers.md)。
 
 ## 案例与方案的对应关系
 

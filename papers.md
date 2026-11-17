@@ -126,7 +126,7 @@
 | 目的 | 优先查阅 | 能得到什么 |
 |---|---|---|
 | **数据库选型** | TDSQL / GaussDB / OceanBase 的 PVLDB 系统论文 + 各产品 TPC-C/TPC-DS 成绩 | 用真实系统论文而非宣传材料对比架构取舍；关注论文披露的副本协议、分片、容灾 RTO 数据 |
-| **核心架构设计** | OceanBase VLDB 2022、GoldenDB《金融电子化》实践文章 | 看工业界如何把分布式数据库落到金融核心，对齐 [architecture.md](docs/architecture.md) 的方案 |
+| **核心架构设计** | OceanBase VLDB 2022、GoldenDB《金融电子化》实践文章 | 看工业界如何把分布式数据库落到金融核心，对齐 [architecture.md](architecture.md) 的方案 |
 | **迁移合规论证** | JR/T 0203/0204/0205 三项行业标准 + 银监发〔2014〕39 号文 | 立项与验收材料需要引用的标准依据与政策口径 |
 | **技术背书核验** | 核对论文是否真实存在（GoldenDB / YugabyteDB 无顶会系统论文，勿编造） | 避免把厂商宣传当作学术结论，引用前先验证出处 |
 
