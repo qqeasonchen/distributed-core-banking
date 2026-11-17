@@ -12,40 +12,40 @@
 
 | 文件 | 内容 |
 |---|---|
-| [timeline.md](timeline.md) | **发展时间线（2014—2026）**：政策、产品、案例、国际脉络四条线 |
-| [concepts.md](concepts.md) | **概念层**：Core Banking、业务模块全景、复式记账、客户与账户体系、工程判断与常见误区 |
+| [timeline.md](timeline.md) | **发展时间线（2014—2026）**：按起步、首例突破、规模化、主机收官与 AI 化四阶段梳理政策/产品/案例/国际四条线，附关键判断 |
+| [concepts.md](concepts.md) | **核心概念**：Core Banking 职能与业务模块全景、复式记账与账务不变量、客户与账户体系、"分布在哪"、一致性与可用性工程权衡、常见误区与术语对照 |
 
-### 二、方案与工程（知识层）
+### 二、方案与工程
 
 | 文件 | 内容 |
 |---|---|
-| [architecture.md](architecture.md) | **方案层·分布式架构**：从业界案例提炼——单元化、多活容灾、分片键、流量切换 |
-| [application.md](application.md) | **方案层·应用架构**：核心账务模块方案——热点账户、业会分离、双余额日切、产品工厂、数据追溯 |
-| [migration.md](migration.md) | **工程层**：渐进式替换、CDC、一致性校验、分布式事务、对抗性验证、灰度切换 |
+| [architecture.md](architecture.md) | **分布式架构**（案例在前、方案在后）：蚂蚁 LDC 单元化、RZone/GZone/CZone、分片键与单元数量判据、流量路由与封闭、多活三形态、两地三中心 vs 异地多活、切换演练工艺、微众两地七中心 |
+| [application.md](application.md) | **应用架构·账务模块方案**：热点账户、业会分离、双余额与毫秒级日切、产品工厂与参数化、数据标准与全链路追溯，附痛点—方案速查表 |
+| [migration.md](migration.md) | **迁移工程**：不停机换引擎——渐进式替换与切片顺序、双写陷阱到 CDC、交易回放与一致性校验、故障注入对抗性验证、分布式事务按场景选型、灰度切换控制爆炸半径、迁移完成判据 |
 
 ### 三、技术组件
 
 | 文件 | 内容 |
 |---|---|
-| [databases.md](databases.md) | 分布式数据库：OceanBase、TDSQL、GaussDB、GoldenDB 等 |
-| [middleware.md](middleware.md) | **中间件**：消息总线→EventMesh/ServiceMesh 演进、WeRedis 缓存与持久化 KV 选型（微众银行一手实践） |
-| [bigdata.md](bigdata.md) | **大数据平台**：BDP/WeDataSphere、四个统一、Linkis 统一计算入口、双集群与一站式开发（微众银行一手实践） |
+| [databases.md](databases.md) | **分布式数据库**：OceanBase/GoldenDB/GaussDB/TiDB 等产品演进与 2025—2026 进展、AI 原生能力、微众三则实证（分场景选型 / TiDB 批量 / TDSQL 存算分离）、国际参考与选型关注点 |
+| [middleware.md](middleware.md) | **中间件**（微众一手实践四篇）：消息总线→EventMesh/ServiceMesh 演进、DeFiBus 自研与开源、WeRedis 缓存与持久化 KV 选型、金融场景 K8s 容器化取舍 |
+| [bigdata.md](bigdata.md) | **大数据平台**（微众一手实践）：金融级平台自建的四个问题、BDP/WeDataSphere 分层、Linkis 统一计算入口、DataSphereStudio 一站式工具链、生产/探索双集群与异地灾备 |
 
 ### 四、基础设施与运维
 
 | 文件 | 内容 |
 |---|---|
-| [infrastructure.md](infrastructure.md) | **基础设施**：数据中心机房、全三层网络搬迁、POD 迁移与裁撤、WeCloud 运维风控、蓝光存储归档（微众银行一手实践） |
-| [ecc.md](ecc.md) | **运维应急**：UIOC 故障处置升级流程、角色固化与清单化、三级升级、告警治理（微众银行一手实践） |
+| [infrastructure.md](infrastructure.md) | **基础设施**（微众一手实践）：机房系统与合规分级、全三层网络搬迁、POD 架构迁移与数据中心裁撤、WeCloud 运维风控、蓝光存储归档 |
+| [ecc.md](ecc.md) | **运维应急**（微众一手实践）：ECC 总控中心实体形态与职能定位、UIOC 故障处置升级流程（角色固化/清单化/三级升级）、告警治理与 Smart 运维 |
 
 ### 五、实践、市场与查阅
 
 | 文件 | 内容 |
 |---|---|
-| [cases.md](cases.md) | 银行实践案例：大行去主机收官、省级农信、国际案例 |
-| [vendors.md](vendors.md) | 厂商与产品：国际（Temenos、Fiserv）与国内（长亮、宇信等） |
-| [papers.md](papers.md) | 论文、白皮书与行业标准（含 JR/T 0203/0204/0205 精确标准号） |
-| [resources.md](resources.md) | 学习资源：课程、博客、开源项目、迁移工程方法 |
+| [cases.md](cases.md) | **银行实践案例**：微众/民生等先行者、2014—2018 早期改造、2025—2026 大行"去主机"收官（工行/中行/建行/农行/邮储/中信）、省级农信换芯、中小银行标杆、国际案例与官方披露渠道 |
+| [vendors.md](vendors.md) | **厂商与产品**：国际厂商与开放银行 API 层、国内厂商与银行科技子公司、2025—2026 市场格局、厂商沿革（Thought Machine 时间线等） |
+| [papers.md](papers.md) | **论文·白皮书·标准**：分布式数据库与共识事务论文、2024—2026 前沿、行业标准与监管文件（JR/T 0203/0204/0205、39 号文、PSD2/ISO 20022）、按用途查阅指引 |
+| [resources.md](resources.md) | **学习资源**：开源项目（基础/金融中间件/核心实现与可观测性）及起源时间线、按角色查阅、社区、认证课程、书单、架构专题与迁移工程方法体系 |
 
 从内容性质看，文档分为两层：`concepts.md` / `architecture.md` / `application.md` / `migration.md` 四份为**知识层**（对应上方第一、二组），从业界主流真实实践提炼可复用的方案、判据与踩坑经验；其余为**资料层**。两层互不复述、交叉索引——案例档案在资料层，方法与知识点在概念/分布式架构/应用架构/工程四份文档。
 
