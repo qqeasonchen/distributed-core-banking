@@ -24,6 +24,8 @@
 
 > **趋势**：国际厂商 2025—2026 双主线——① **AI Agent 化**（Oracle agentic platform、TCS BaNCS AI Compass、Backbase 收购 Kasisto）；② **资本重组**（Finastra 被 Vista 拆分，核心系统作为高粘性经常性收入资产被 PE 单独定价）。云原生/SaaS 化核心（Temenos SaaS、Thought Machine Vault）与国内「分布式 + 信创」路径殊途同归。
 
+**国际核心系统市场格局与出海本地化（2021 年视角）**：据 Celent 口径（转述），全球银行 IT 支出约 2700 亿美元、预计 2022 年增至 3090 亿（CAGR 4.6%），北美占 39% / 欧洲 29% / 亚太 25%，核心系统是最大细分板块、约占整体解决方案市场 1/3。格局上，美国集中度高（Fiserv 第一、FIS 主大中型行、Jack Henry 覆盖中小行），欧洲分散（Temenos 领先、约占全球 30%，PSD2 修正案推动开放银行 API），亚太约 25%（SilverLake 在东南亚领先但无整体领先者）。国内厂商出海首站多选东南亚，本地化挑战具体而琐碎——卢森堡客户信息不得出境、韩国首尔特殊加密传输、部分国家客户名称超 100 字符、俄罗斯地址严格标准化、阿拉伯语从右到左显示打印、欧美小数点与分隔符差异及监管报表差异，都要求产品做因地制宜改造；作者还提醒技术与业务流程要同步管控、关注技术创造的业务价值。来源：[金融 IT 业造船出海——银行核心系统探索新机遇](https://mp.weixin.qq.com/s?__biz=MzIzMTk2NjAzMg==&mid=2247485008&idx=1&sn=9ff526dce3aaad2edcaae3abd3a30d82)（「小代嘚吧嘚」，2021-06；同篇另有英文版 Financial Technology Overseas Venture，数据口径一致）。
+
 ### 开放银行 / API 基础设施层
 
 - **TrueLayer**：英国上线 Bank on File（基于 UKPI 的商业 VRP 框架），把开放银行从「账户信息聚合」推进到可持续支付（cVRP）

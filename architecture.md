@@ -191,9 +191,9 @@
 
 ## 方法与工程来源
 
-- **蚂蚁单元化架构**（RZone/GZone/CZone、流量路由、容灾/灰度/弹性、三种落地形态）：[新一代金融核心：全分布式单元化技术架构](https://www.sofastack.tech/blog/antgroup-yinboxue-fully-distributed-unitized-technology-architecture/)（蚂蚁 SOFAStack）、[异地多活运维体系实践](http://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651644030&idx=1&sn=fb98e945cbbea6be680904bfb898a5a2)（蚂蚁首席架构师）
+- **蚂蚁单元化架构**（RZone/GZone/CZone、流量路由、容灾/灰度/弹性、三种落地形态）：[新一代金融核心：全分布式单元化技术架构](https://www.sofastack.tech/blog/antgroup-yinboxue-fully-distributed-unitized-technology-architecture/)（蚂蚁 SOFAStack）、[异地多活运维体系实践](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651644030&idx=1&sn=fb98e945cbbea6be680904bfb898a5a2)（蚂蚁首席架构师）
 - **交通银行贷记卡核心**（客户维度拆分、单元互备、1% 流量调拨、双中心跑批）：[贷记卡核心重构实践](https://www.cebnet.com.cn/20230810/102900066.html)
-- **银行分片键评审与单元化拆分**：[核心类系统 Oracle→TDSQL 迁移方案设计实践](http://mp.weixin.qq.com/s?__biz=MjM5NTk0MTM1Mw==&mid=2650712034&idx=2&sn=83833e46a891603cf0fe24fd9acaca1a)
+- **银行分片键评审与单元化拆分**：[核心类系统 Oracle→TDSQL 迁移方案设计实践](https://mp.weixin.qq.com/s?__biz=MjM5NTk0MTM1Mw==&mid=2650712034&idx=2&sn=83833e46a891603cf0fe24fd9acaca1a)
 - **两条路线与六大设计要点**：[腾讯云商业银行核心系统分布式转型白皮书](https://cloud.tencent.com/developer/article/2676803)、[银行亿级账户核心转型实践](https://cloud.tencent.com/developer/article/2677311)
 - **单元数量与决策框架**（平安单元划分、四川农商三地四中心）：[分布式银行核心业务系统白皮书](https://www.sgpjbg.com.cn/searchtag/26666541.html)
 - **容灾形态与多副本策略**：[Replica 副本在多活数据中心的应用](https://m.yisu.com/zixun/1072871.html)

@@ -111,7 +111,7 @@
 
 | 环节 | 资料 | 要点 |
 |---|---|---|
-| **交易回放比对** | [农行研发中心《分布式核心银行系统的测试研究与实践》（《金融电子化》2020-05）](http://mp.weixin.qq.com/s?__biz=MjM5MzA3MzAzOQ==&mid=2655478962&idx=3&sn=ec2e54f14782262d8400c2433d2b3ec0) · 神州信息 Sm@rtComplay · 华青融天 EZSonar | 生产日志脱敏回放；网络流量录制 + 旁路 TAP 镜像；**交易级 + 数据库级两层级比对** |
+| **交易回放比对** | [农行研发中心《分布式核心银行系统的测试研究与实践》（《金融电子化》2020-05）](https://mp.weixin.qq.com/s?__biz=MjM5MzA3MzAzOQ==&mid=2655478962&idx=3&sn=ec2e54f14782262d8400c2433d2b3ec0) · 神州信息 Sm@rtComplay · 华青融天 EZSonar | 生产日志脱敏回放；网络流量录制 + 旁路 TAP 镜像；**交易级 + 数据库级两层级比对** |
 | **数据核对平台** | [Wallet Reconciliation（2026-08）](https://www.besthub.dev/articles/how-to-secure-wallet-funds-at-billion-scale-through-reconciliation-balance-checks-channel-matching-and-auto-repair-80148a0bdc29) · StarRocks 对账 3.0 | 采集/标准化/核对/差异中心/修复/治理六层架构；Flink SQL 分钟级差异检测 |
 | **混沌工程** | [ChaosBlade](https://chaosblade.io/) · 中电金信银行核心测试方案 | 网络延迟/服务宕机/CPU 抢占故障注入，爆炸半径与自动中止安全控制 |
 | **全链路压测** | 农行分布式核心性能测试实践（同上农行链接） · [dbaplus](https://www.dbaplus.cn) | JMeter 单交易基准/负载/混合/稳定场景；类网关统一发压；80% 交易量在 20% 时间内完成推算 TPS |
