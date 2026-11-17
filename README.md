@@ -23,7 +23,7 @@
 | [docs/business-modules.md](docs/business-modules.md) | **业务层**：核心系统业务模块、技术痛点与解决方案（热点账户、业会分离、日切、产品工厂等） |
 | [docs/concepts.md](docs/concepts.md) | **概念层**：Core Banking、复式记账、分布式核心的分层、工程判断与常见误区 |
 | [docs/architecture.md](docs/architecture.md) | **方案层**：从业界案例提炼——单元化、多活容灾、分片键、流量切换 |
-| [docs/migration.md](docs/migration.md) | **工程层**：绞杀者模式、CDC、一致性校验、对抗性验证、灰度切换 |
+| [docs/migration.md](docs/migration.md) | **工程层**：渐进式替换、CDC、一致性校验、对抗性验证、灰度切换 |
 
 资料按两层组织：`docs/` 四份文档为**知识层**，从业界主流真实实践提炼可复用的方案、判据与踩坑经验；根目录文档为**资料层**（具体案例、产品、时间线、政策）。两层互不复述、交叉索引——案例档案在根目录，方法与知识点在 `docs/`。
 

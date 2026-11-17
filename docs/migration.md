@@ -9,9 +9,9 @@
 
 核心系统改造最难的不是新技术，而是**在不能停机的前提下更换整个账本**——新旧两套系统必须长时间并存且账务一致。这本质是一个**在线系统重构问题**，软件工程已有成熟的方法论体系。
 
-## 绞杀者模式（Strangler Fig）：渐进替换的元模式
+## 渐进式替换：遗留系统平稳换新的基本模式
 
-Martin Fowler 于 2004 年提出（2019 年更名为 Strangler Fig Application），是当前公认最稳妥的遗留系统替换模式。名字来自澳大利亚雨林中的绞杀榕：种子在宿主树冠萌发，根系向下生长，最终完全包裹并取代宿主。
+由 Martin Fowler 于 2004 年提出（文献原称 Strangler Fig Application），是当前公认最稳妥的遗留系统替换模式。核心思想是：不做一次性推倒重写，而是在老系统外围逐步接管能力，一块一块替换，直到新系统完全承接、老系统平稳退场。
 
 ### 为什么"推倒重写"几乎总是失败
 
@@ -22,7 +22,7 @@ Joel Spolsky 在《Things You Should Never Do》(2000) 中称抛弃可运行代�
 3. **遗留行为无文档**：多年 bug 修复已成为"承重墙"，照搬是浪费，漏掉就出故障
 4. **范围蔓延**：各方把重写当作补足所有历史欠账的机会
 
-### 绞杀者模式的机制
+### 渐进式替换的机制
 
 ```
          ┌──────────── Facade（拦截点/路由层）────────────┐
@@ -48,13 +48,13 @@ Joel Spolsky 在《Things You Should Never Do》(2000) 中称抛弃可运行代�
 
 典型稳妥顺序：只读查询 → 边缘功能 → 复杂核心。数据唯一所有者（one writer per table）是关键纪律——新旧双方同时写同一批记录必然产生分歧。
 
-**来自实践的切片序列**：中信银行的迁移按风险递增逐步推进——冠字号系统 → 门户 → 同业 → 积分 → 信用卡核心 → 账务核心，从边缘到中枢，前后历时约六年（案例详情见 [cases.md](../cases.md)）。这印证了绞杀者模式在金融核心的判断：**切片顺序由风险而非代码便利度决定，越靠近账务的越后置**。
+**来自实践的切片序列**：中信银行的迁移按风险递增逐步推进——冠字号系统 → 门户 → 同业 → 积分 → 信用卡核心 → 账务核心，从边缘到中枢，前后历时约六年（案例详情见 [cases.md](../cases.md)）。这印证了渐进式替换在金融核心的判断：**切片顺序由风险而非代码便利度决定，越靠近账务的越后置**。
 
 来源：[Martin Fowler — StranglerFigApplication](https://martinfowler.com/bliki/StranglerFigApplication.html)、[microservices.io — Strangler Fig 模式](https://microservices.io/post/refactoring/2023/06/21/strangler-fig-application-pattern-incremental-modernization-to-services.md.html)、中信凌云工程公开资料（见 cases.md）。
 
 ## 数据迁移：从双写到 CDC
 
-**代码迁移可以渐进，数据迁移不能回避**——这是绞杀者模式中最难的部分。
+**代码迁移可以渐进，数据迁移不能回避**——这是渐进式替换中最难的部分。
 
 ### 双写陷阱（Dual-Write Trap）
 
@@ -132,7 +132,7 @@ cache.invalidate()    // ③ 失败 → 脏读
 
 ### 流量切换的技术手段
 
-- **Facade 路由**：按用户 / 业务 / 网点维度分流（绞杀者模式的拦截点）
+- **Facade 路由**：按用户 / 业务 / 网点维度分流（渐进式替换的拦截点）
 - **影子流量 / 双发**：交易同时打到新旧系统，只以新系统输出作比对，不影响生产
 - **灰度序列**：内部用户 → 白名单 → 单区域 / 单业务线 → 全量
 - **每阶段可回退**：切换开关必须能快速反向；回退粒度可分级（单交易 / 单批次 / 全流量）
@@ -162,7 +162,7 @@ cache.invalidate()    // ③ 失败 → 脏读
 
 ## 方法与工程来源
 
-- **绞杀者模式**：[Martin Fowler — Strangler Fig Application](https://martinfowler.com/bliki/StranglerFigApplication.html)；Sam Newman, *Monolith to Microservices* (2019)
+- **渐进式替换**：[Martin Fowler — Strangler Fig Application](https://martinfowler.com/bliki/StranglerFigApplication.html)；Sam Newman, *Monolith to Microservices* (2019)
 - **CDC / Outbox**：[Debezium 官方文档](https://www.debezium.io/documentation/reference/stable/index.html)；LinkedIn Databus (2012) 是变更捕获的早期工业实践
 - **对抗性验证框架**：[Jepsen 官网与分析报告](https://jepsen.io/analyses)、[jepsen-io/jepsen](https://github.com/jepsen-io/jepsen)
 - **事务隔离与一致性判断**：见 [concepts.md](concepts.md)
