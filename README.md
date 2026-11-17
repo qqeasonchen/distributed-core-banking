@@ -20,6 +20,7 @@
 | [vendors.md](vendors.md) | 厂商与产品：国际（Temenos、Fiserv）与国内（长亮、宇信等） |
 | [cases.md](cases.md) | 银行实践案例：大行去主机收官、省级农信、国际案例 |
 | [infrastructure.md](infrastructure.md) | **基础设施**：数据中心机房、全三层网络搬迁、POD 迁移与裁撤、WeCloud 运维风控、蓝光存储归档（微众银行一手实践） |
+| [ecc.md](ecc.md) | **运维应急**：UIOC 故障处置升级流程、角色固化与清单化、三级升级、告警治理（微众银行一手实践） |
 | [papers.md](papers.md) | 论文、白皮书与行业标准（含 JR/T 0203/0204/0205 精确标准号） |
 | [resources.md](resources.md) | 学习资源：课程、博客、开源项目、迁移工程方法 |
 | [concepts.md](concepts.md) | **概念层**：Core Banking、业务模块全景、复式记账、客户与账户体系、工程判断与常见误区 |
