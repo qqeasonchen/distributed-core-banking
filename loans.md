@@ -4,7 +4,7 @@
 >
 > **整理说明**：每篇标注原文时间与链接，要点均基于公众号原文全文提炼，未逐字引用。文章按时间倒序排列。
 >
-> **交叉阅读**：贷款核心批量实践（TiDB）见 [databases.md](../databases.md)；产品与核算解耦见 [application.md](../application.md)。
+> **交叉阅读**：贷款核心批量实践（TiDB）见 [databases.md](databases.md)；产品与核算解耦见 [application.md](application.md)。
 
 ## 核心银行系统 之九 贷款（四）（2019-11-27）
 

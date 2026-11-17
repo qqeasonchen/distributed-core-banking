@@ -4,7 +4,7 @@
 >
 > **整理说明**：每篇标注原文时间与链接，要点均基于公众号原文全文提炼，未逐字引用。文章按时间倒序排列。
 >
-> **交叉阅读**：存款产品工厂与参数化、差异化定价见 [application.md](../application.md)；账户体系与 I/II/III 类账户见 [concepts.md](../concepts.md)。
+> **交叉阅读**：存款产品工厂与参数化、差异化定价见 [application.md](application.md)；账户体系与 I/II/III 类账户见 [concepts.md](concepts.md)。
 
 ## “不动户/久悬户”的悬疑故事（2020-01-05）
 
