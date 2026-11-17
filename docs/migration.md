@@ -128,6 +128,24 @@ cache.invalidate()    // ③ 失败 → 脏读
 
 来源：[Jepsen 官网与分析报告](https://jepsen.io/analyses)、[jepsen-io/jepsen 框架](https://github.com/jepsen-io/jepsen)、[Jepsen 方法论综述](https://www.scixa.com/article?lang=en&slug=jepsen-linearizability-testing)、[CockroachDB Jepsen 测试用例（bank/sets/register）](https://github.com/jepsen-io/cockroachdb)。
 
+## 分布式事务：按场景选模式
+
+跨服务、跨分片的资金流转需要一致性保证，但**不能依赖数据库层回滚外部不可逆资源**（如已发出的支付指令）。这是核心迁移中事务设计的根本约束。
+
+**来自实践的做法**：平安银行自研分布式事务引擎基于两阶段提交——一阶段资源预留、二阶段提交或释放；基于事件溯源把事务事件持久化到各参与方，支持幂等与防悬挂、去中心化管理；并支持 TCC 与 Saga 混合编排，按场景选择。中电金信在新核心中让核心支持业务流水、分录流水、异步/实时清算，按全行核算体系设计。
+
+**提炼方案**——按业务性质分模式，不一刀切：
+
+| 场景 | 模式 | 理由 |
+|---|---|---|
+| **资金类**（转账、支付、清算） | TCC / Saga 在业务层冻结与补偿 | 外部资源不可逆，需业务层显式预留与反向操作 |
+| **内部可控 CRUD** | AT 模式 / 本地事务 | 参与方都在可控范围内，可依赖框架自动补偿 |
+| **需审计与回放** | 事件溯源 | 事务事件持久化，天然支持幂等、防悬挂与追溯 |
+
+> **可借鉴的关键点**：分布式事务引擎要**按场景选模式**而非全局统一，资金类一律走业务层的冻结补偿。事件溯源 + 事务上下文传递是保障幂等、防悬挂的关键工程手段。清算账户作为热点账户的治理见 [architecture.md](architecture.md) 热点账户一节。
+
+来源：[平安银行新一代分布式核心](https://m.toutiao.com/article/7626952021127741992)、[中电金信某省农信新核心](https://www.gientech.com/detail/70.html)。
+
 ## 切换与灰度：控制爆炸半径
 
 ### 流量切换的技术手段

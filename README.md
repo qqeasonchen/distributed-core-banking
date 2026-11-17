@@ -20,12 +20,11 @@
 | [cases.md](cases.md) | 银行实践案例：大行去主机收官、省级农信、国际案例 |
 | [papers.md](papers.md) | 论文、白皮书与行业标准（含 JR/T 0203/0204/0205 精确标准号） |
 | [resources.md](resources.md) | 学习资源：课程、博客、开源项目、迁移工程方法 |
-| [docs/business-modules.md](docs/business-modules.md) | **业务层**：核心系统业务模块、技术痛点与解决方案（热点账户、业会分离、日切、产品工厂等） |
-| [docs/concepts.md](docs/concepts.md) | **概念层**：Core Banking、复式记账、分布式核心的分层、工程判断与常见误区 |
-| [docs/architecture.md](docs/architecture.md) | **方案层**：从业界案例提炼——单元化、多活容灾、分片键、流量切换 |
-| [docs/migration.md](docs/migration.md) | **工程层**：渐进式替换、CDC、一致性校验、对抗性验证、灰度切换 |
+| [docs/concepts.md](docs/concepts.md) | **概念层**：Core Banking、业务模块全景、复式记账、客户与账户体系、工程判断与常见误区 |
+| [docs/architecture.md](docs/architecture.md) | **方案层**：从业界案例提炼——单元化、多活容灾、分片键、流量切换、热点账户、业会分离、双余额日切、产品工厂 |
+| [docs/migration.md](docs/migration.md) | **工程层**：渐进式替换、CDC、一致性校验、分布式事务、对抗性验证、灰度切换 |
 
-资料按两层组织：`docs/` 四份文档为**知识层**，从业界主流真实实践提炼可复用的方案、判据与踩坑经验；根目录文档为**资料层**（具体案例、产品、时间线、政策）。两层互不复述、交叉索引——案例档案在根目录，方法与知识点在 `docs/`。
+资料按两层组织：`docs/` 三份文档为**知识层**，从业界主流真实实践提炼可复用的方案、判据与踩坑经验；根目录文档为**资料层**（具体案例、产品、时间线、政策）。两层互不复述、交叉索引——案例档案在根目录，方法与知识点在 `docs/`。
 
 ## 来源标注约定
 
