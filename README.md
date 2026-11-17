@@ -18,13 +18,14 @@
 | [databases.md](databases.md) | 分布式数据库：OceanBase、TDSQL、GaussDB、GoldenDB 等 |
 | [vendors.md](vendors.md) | 厂商与产品：国际（Temenos、Fiserv）与国内（长亮、宇信等） |
 | [cases.md](cases.md) | 银行实践案例：大行去主机收官、省级农信、国际案例 |
+| [infrastructure.md](infrastructure.md) | **基础设施**：数据中心全三层网络搬迁、POD 架构应用迁移、蓝光存储归档（微众银行 WeStar 一手实践） |
 | [papers.md](papers.md) | 论文、白皮书与行业标准（含 JR/T 0203/0204/0205 精确标准号） |
 | [resources.md](resources.md) | 学习资源：课程、博客、开源项目、迁移工程方法 |
 | [concepts.md](concepts.md) | **概念层**：Core Banking、业务模块全景、复式记账、客户与账户体系、工程判断与常见误区 |
 | [architecture.md](architecture.md) | **方案层**：从业界案例提炼——单元化、多活容灾、分片键、流量切换、热点账户、业会分离、双余额日切、产品工厂 |
 | [migration.md](migration.md) | **工程层**：渐进式替换、CDC、一致性校验、分布式事务、对抗性验证、灰度切换 |
 
-资料按两层组织：`concepts.md` / `architecture.md` / `migration.md` 三份文档为**知识层**，从业界主流真实实践提炼可复用的方案、判据与踩坑经验；其余文档为**资料层**（具体案例、产品、时间线、政策）。两层互不复述、交叉索引——案例档案在资料层，方法与知识点在概念/方案/工程三份文档。
+资料按两层组织：`concepts.md` / `architecture.md` / `migration.md` 三份文档为**知识层**，从业界主流真实实践提炼可复用的方案、判据与踩坑经验；其余文档为**资料层**（具体案例、产品、时间线、政策、基础设施）。两层互不复述、交叉索引——案例档案在资料层，方法与知识点在概念/方案/工程三份文档。
 
 ## 来源标注约定
 
