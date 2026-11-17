@@ -11,7 +11,7 @@
 | [timeline.md](timeline.md) | **发展时间线（2014—2026）**：政策、产品、案例、国际脉络四条线 |
 | [databases.md](databases.md) | 分布式数据库：OceanBase、TDSQL、GaussDB、GoldenDB 等 |
 | [middleware.md](middleware.md) | **中间件**：消息总线→EventMesh/ServiceMesh 演进、WeRedis 缓存与持久化 KV 选型（微众银行一手实践） |
-| [bd.md](bd.md) | **大数据平台**：BDP/WeDataSphere、四个统一、Linkis 统一计算入口、双集群与一站式开发（微众银行一手实践） |
+| [bigdata.md](bigdata.md) | **大数据平台**：BDP/WeDataSphere、四个统一、Linkis 统一计算入口、双集群与一站式开发（微众银行一手实践） |
 | [vendors.md](vendors.md) | 厂商与产品：国际（Temenos、Fiserv）与国内（长亮、宇信等） |
 | [cases.md](cases.md) | 银行实践案例：大行去主机收官、省级农信、国际案例 |
 | [infrastructure.md](infrastructure.md) | **基础设施**：数据中心机房、全三层网络搬迁、POD 迁移与裁撤、WeCloud 运维风控、蓝光存储归档（微众银行一手实践） |
