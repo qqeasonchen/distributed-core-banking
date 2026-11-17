@@ -14,7 +14,6 @@
 |---|---|
 | [timeline.md](timeline.md) | **发展时间线（2014—2026）**：按起步、首例突破、规模化、主机收官与 AI 化四阶段梳理政策/产品/案例/国际四条线，附关键判断 |
 | [concepts.md](concepts.md) | **核心概念**（只讲"是什么"）：Core Banking 职能与业务模块全景、职责边界、复式记账与账务基石、客户与账户概念总览、"分布在哪"、一致性与可用性工程权衡、常见误区与术语对照 |
-| [account-system.md](account-system.md) | **账户体系专题**（从 concepts.md 拆出的深度展开）：客户账号与记账账号结构模型、Ⅰ/Ⅱ/Ⅲ 类户监管脉络、账户类型科普、银行卡账务本质 |
 
 ### 二、方案与工程
 
@@ -47,9 +46,9 @@
 | [vendors.md](vendors.md) | **厂商与产品**：国际厂商与开放银行 API 层、国内厂商与银行科技子公司、2025—2026 市场格局、厂商沿革（Thought Machine 时间线等） |
 | [papers.md](papers.md) | **论文·白皮书·标准**：分布式数据库与共识事务论文、2024—2026 前沿、行业标准与监管文件（JR/T 0203/0204/0205、39 号文、PSD2/ISO 20022）、按用途查阅指引 |
 | [resources.md](resources.md) | **学习资源**：开源项目（基础/金融中间件/核心实现与可观测性）及起源时间线、按角色查阅、社区、认证课程、书单、架构专题与迁移工程方法体系 |
-| [accounting.md](accounting.md) / [deposits.md](deposits.md) / [loans.md](loans.md) | **专题教程**（代堂鸣一手）：账务处理 10 篇（分录 / 内部户 / 清算 / 错账）、存款业务 7 篇、贷款业务 8 篇，独立成篇、文件名用英文。**「银行核心系统」专辑 51 篇与「整体认知」23 篇已全部按主题打散融入上面各文档**——架构技术/灾备/微服务入 [architecture.md](architecture.md) 与 [application.md](application.md)，7×24/批量/双余额/产品工厂入 [application.md](application.md)，分表分区/SQL/死锁/缓存入库与中间件文档，账户体系/银行卡/技术演进入 [concepts.md](concepts.md)，迁移与测试入 [migration.md](migration.md)，厂商名单/金融科技观察入 [vendors.md](vendors.md) / [cases.md](cases.md)，CRS 入 [papers.md](papers.md)，工程工具与职业成长入 [resources.md](resources.md)。跨专辑去重后共 88 篇，每篇保留原文链接 |
+| [accounting.md](accounting.md) / [deposits.md](deposits.md) / [loans.md](loans.md) | **专题教程**（代堂鸣一手）：账务处理与账户体系 14 篇（分录 / 内部户 / 清算 / 错账 + 账户结构模型 / 账户类型 / 银行卡）、存款业务 7 篇、贷款业务 8 篇，独立成篇、文件名用英文。**「银行核心系统」专辑 51 篇与「整体认知」23 篇已全部按主题打散融入上面各文档**——架构技术/灾备/微服务入 [architecture.md](architecture.md) 与 [application.md](application.md)，7×24/批量/双余额/产品工厂入 [application.md](application.md)，分表分区/SQL/死锁/缓存入库与中间件文档，账户体系/银行卡入 [accounting.md](accounting.md)、技术演进入 [concepts.md](concepts.md)，迁移与测试入 [migration.md](migration.md)，厂商名单/金融科技观察入 [vendors.md](vendors.md) / [cases.md](cases.md)，CRS 入 [papers.md](papers.md)，工程工具与职业成长入 [resources.md](resources.md)。跨专辑去重后共 88 篇，每篇保留原文链接 |
 
-从内容性质看，文档分为两层：`concepts.md` / `account-system.md` / `architecture.md` / `application.md` / `migration.md` 五份为**知识层**（对应上方第一、二组），从业界主流真实实践提炼可复用的方案、判据与踩坑经验；其余为**资料层**。两层互不复述、交叉索引——案例档案在资料层，方法与知识点在概念/账户体系/分布式架构/应用架构/工程五份文档。
+从内容性质看，文档分为两层：`concepts.md` / `architecture.md` / `application.md` / `migration.md` 四份为**知识层**（对应上方第一、二组），从业界主流真实实践提炼可复用的方案、判据与踩坑经验；其余为**资料层**。两层互不复述、交叉索引——案例档案在资料层，方法与知识点在概念/分布式架构/应用架构/工程四份文档。
 
 ## 来源标注约定
 
