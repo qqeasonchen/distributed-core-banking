@@ -6,7 +6,7 @@
 
 ## 目录
 
-按"整体到局部"组织：先建立全局认知，再给出可复用的方法与方案，然后逐层展开支撑系统的技术组件、基础设施与运维，最后是具体实践、市场供给与查阅资料。
+按"整体到局部"组织：先建立全局认知，再给出可复用的方法与方案，然后逐层展开支撑系统的技术组件、基础设施与运维，接着是一手业务专题教程，最后是具体实践、市场供给与查阅资料。
 
 ### 一、全局认知
 
@@ -38,7 +38,17 @@
 | [infrastructure.md](infrastructure.md) | **基础设施**（微众一手实践）：机房系统与合规分级、全三层网络搬迁、POD 架构迁移与数据中心裁撤、WeCloud 运维风控、蓝光存储归档 |
 | [ecc.md](ecc.md) | **运维应急**（微众一手实践）：ECC 总控中心实体形态与职能定位、UIOC 故障处置升级流程（角色固化/清单化/三级升级）、告警治理与 Smart 运维 |
 
-### 五、实践、市场与查阅
+### 五、业务专题教程
+
+| 文件 | 内容 |
+|---|---|
+| [accounting.md](accounting.md) | **账务处理与账户体系**（代堂鸣一手，14 篇）：账务处理 10 篇——资金业务同业 / 定价利息核算 / 清算体系 / 内部户 / 错账处理 / 账务设计与会计分录 / 第三方支付账务 / 银行会计科普；账户体系 4 篇——演进与层次 / 分类与结构模型 / 账户类型 / 银行卡 |
+| [deposits.md](deposits.md) | **存款业务**（7 篇）：存款（一/二）、支取方式、计提、自贸区、不动户/久悬户 |
+| [loans.md](loans.md) | **贷款业务**（8 篇）：贷款（一~四）、账单分期、贷款流程科普与入门 |
+
+> **篇数与打散去向**：这三篇为「账务处理」10 篇、「存款业务」7 篇、「贷款业务」8 篇独立成篇（文件名用英文）。「银行核心系统」专辑 **51 篇**与「整体认知」**23 篇**已全部按主题打散融入前面各组文档——架构技术/灾备/微服务入 [architecture.md](architecture.md) 与 [application.md](application.md)，7×24/批量/双余额/产品工厂入 [application.md](application.md)，分表分区/SQL/死锁/缓存入 [databases.md](databases.md) / [middleware.md](middleware.md)，账户体系/银行卡入 [accounting.md](accounting.md)、技术演进入 [concepts.md](concepts.md)，迁移与测试入 [migration.md](migration.md)，厂商名单/金融科技观察入 [vendors.md](vendors.md) / [cases.md](cases.md)，CRS 入 [papers.md](papers.md)，工程工具与职业成长入 [resources.md](resources.md)。跨专辑去重后共 **88 篇**，每篇保留原文链接。
+
+### 六、实践、市场与查阅
 
 | 文件 | 内容 |
 |---|---|
@@ -46,7 +56,6 @@
 | [vendors.md](vendors.md) | **厂商与产品**：国际厂商与开放银行 API 层、国内厂商与银行科技子公司、2025—2026 市场格局、厂商沿革（Thought Machine 时间线等） |
 | [papers.md](papers.md) | **论文·白皮书·标准**：分布式数据库与共识事务论文、2024—2026 前沿、行业标准与监管文件（JR/T 0203/0204/0205、39 号文、PSD2/ISO 20022）、按用途查阅指引 |
 | [resources.md](resources.md) | **学习资源**：开源项目（基础/金融中间件/核心实现与可观测性）及起源时间线、按角色查阅、社区、认证课程、书单、架构专题与迁移工程方法体系 |
-| [accounting.md](accounting.md) / [deposits.md](deposits.md) / [loans.md](loans.md) | **专题教程**（代堂鸣一手）：账务处理与账户体系 14 篇（分录 / 内部户 / 清算 / 错账 + 账户结构模型 / 账户类型 / 银行卡）、存款业务 7 篇、贷款业务 8 篇，独立成篇、文件名用英文。**「银行核心系统」专辑 51 篇与「整体认知」23 篇已全部按主题打散融入上面各文档**——架构技术/灾备/微服务入 [architecture.md](architecture.md) 与 [application.md](application.md)，7×24/批量/双余额/产品工厂入 [application.md](application.md)，分表分区/SQL/死锁/缓存入库与中间件文档，账户体系/银行卡入 [accounting.md](accounting.md)、技术演进入 [concepts.md](concepts.md)，迁移与测试入 [migration.md](migration.md)，厂商名单/金融科技观察入 [vendors.md](vendors.md) / [cases.md](cases.md)，CRS 入 [papers.md](papers.md)，工程工具与职业成长入 [resources.md](resources.md)。跨专辑去重后共 88 篇，每篇保留原文链接 |
 
 从内容性质看，文档分为两层：`concepts.md` / `architecture.md` / `application.md` / `migration.md` 四份为**知识层**（对应上方第一、二组），从业界主流真实实践提炼可复用的方案、判据与踩坑经验；其余为**资料层**。两层互不复述、交叉索引——案例档案在资料层，方法与知识点在概念/分布式架构/应用架构/工程四份文档。
 
