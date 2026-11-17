@@ -1,29 +1,53 @@
 # Distributed Core Banking / 金融分布式核心银行系统资料集
 
-收集整理分布式核心银行系统（Distributed Core Banking System）的相关资料：概念、架构、迁移工程、分布式数据库、中间件、大数据平台、基础设施与运维应急、厂商方案、银行实践案例、标准论文与学习资源。按"资料层 / 知识层"两层组织，详见下方目录。
+收集整理分布式核心银行系统（Distributed Core Banking System）的相关资料：概念、架构、迁移工程、分布式数据库、中间件、大数据平台、基础设施与运维应急、银行实践案例、厂商方案、标准论文与学习资源。目录按"整体到局部"组织，详见下方。
 
 > 中文语境下"分布式核心"指将传统集中式（大型机 + 集中式数据库）的核心银行系统改造为微服务 + 分布式数据库架构的新一代核心系统，兼有国产化替代（信创）的时代背景。
 
 ## 目录
 
+按"整体到局部"组织：先建立全局认知，再给出可复用的方法与方案，然后逐层展开支撑系统的技术组件、基础设施与运维，最后是具体实践、市场供给与查阅资料。
+
+### 一、全局认知
+
 | 文件 | 内容 |
 |---|---|
 | [timeline.md](timeline.md) | **发展时间线（2014—2026）**：政策、产品、案例、国际脉络四条线 |
-| [databases.md](databases.md) | 分布式数据库：OceanBase、TDSQL、GaussDB、GoldenDB 等 |
-| [middleware.md](middleware.md) | **中间件**：消息总线→EventMesh/ServiceMesh 演进、WeRedis 缓存与持久化 KV 选型（微众银行一手实践） |
-| [bigdata.md](bigdata.md) | **大数据平台**：BDP/WeDataSphere、四个统一、Linkis 统一计算入口、双集群与一站式开发（微众银行一手实践） |
-| [vendors.md](vendors.md) | 厂商与产品：国际（Temenos、Fiserv）与国内（长亮、宇信等） |
-| [cases.md](cases.md) | 银行实践案例：大行去主机收官、省级农信、国际案例 |
-| [infrastructure.md](infrastructure.md) | **基础设施**：数据中心机房、全三层网络搬迁、POD 迁移与裁撤、WeCloud 运维风控、蓝光存储归档（微众银行一手实践） |
-| [ecc.md](ecc.md) | **运维应急**：UIOC 故障处置升级流程、角色固化与清单化、三级升级、告警治理（微众银行一手实践） |
-| [papers.md](papers.md) | 论文、白皮书与行业标准（含 JR/T 0203/0204/0205 精确标准号） |
-| [resources.md](resources.md) | 学习资源：课程、博客、开源项目、迁移工程方法 |
 | [concepts.md](concepts.md) | **概念层**：Core Banking、业务模块全景、复式记账、客户与账户体系、工程判断与常见误区 |
+
+### 二、方案与工程（知识层）
+
+| 文件 | 内容 |
+|---|---|
 | [architecture.md](architecture.md) | **方案层·分布式架构**：从业界案例提炼——单元化、多活容灾、分片键、流量切换 |
 | [application.md](application.md) | **方案层·应用架构**：核心账务模块方案——热点账户、业会分离、双余额日切、产品工厂、数据追溯 |
 | [migration.md](migration.md) | **工程层**：渐进式替换、CDC、一致性校验、分布式事务、对抗性验证、灰度切换 |
 
-资料按两层组织：`concepts.md` / `architecture.md` / `application.md` / `migration.md` 四份文档为**知识层**，从业界主流真实实践提炼可复用的方案、判据与踩坑经验；其余文档为**资料层**（时间线、案例、数据库、中间件、大数据平台、基础设施、运维应急、厂商、标准论文、学习资源）。两层互不复述、交叉索引——案例档案在资料层，方法与知识点在概念/分布式架构/应用架构/工程四份文档。
+### 三、技术组件
+
+| 文件 | 内容 |
+|---|---|
+| [databases.md](databases.md) | 分布式数据库：OceanBase、TDSQL、GaussDB、GoldenDB 等 |
+| [middleware.md](middleware.md) | **中间件**：消息总线→EventMesh/ServiceMesh 演进、WeRedis 缓存与持久化 KV 选型（微众银行一手实践） |
+| [bigdata.md](bigdata.md) | **大数据平台**：BDP/WeDataSphere、四个统一、Linkis 统一计算入口、双集群与一站式开发（微众银行一手实践） |
+
+### 四、基础设施与运维
+
+| 文件 | 内容 |
+|---|---|
+| [infrastructure.md](infrastructure.md) | **基础设施**：数据中心机房、全三层网络搬迁、POD 迁移与裁撤、WeCloud 运维风控、蓝光存储归档（微众银行一手实践） |
+| [ecc.md](ecc.md) | **运维应急**：UIOC 故障处置升级流程、角色固化与清单化、三级升级、告警治理（微众银行一手实践） |
+
+### 五、实践、市场与查阅
+
+| 文件 | 内容 |
+|---|---|
+| [cases.md](cases.md) | 银行实践案例：大行去主机收官、省级农信、国际案例 |
+| [vendors.md](vendors.md) | 厂商与产品：国际（Temenos、Fiserv）与国内（长亮、宇信等） |
+| [papers.md](papers.md) | 论文、白皮书与行业标准（含 JR/T 0203/0204/0205 精确标准号） |
+| [resources.md](resources.md) | 学习资源：课程、博客、开源项目、迁移工程方法 |
+
+从内容性质看，文档分为两层：`concepts.md` / `architecture.md` / `application.md` / `migration.md` 四份为**知识层**（对应上方第一、二组），从业界主流真实实践提炼可复用的方案、判据与踩坑经验；其余为**资料层**。两层互不复述、交叉索引——案例档案在资料层，方法与知识点在概念/分布式架构/应用架构/工程四份文档。
 
 ## 来源标注约定
 
